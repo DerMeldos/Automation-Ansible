@@ -1,5 +1,5 @@
 ---
-- hosts: NewHost-CentOS, Debian
+- hosts: NewHostCentOS, NewHostDebian
   become: yes
   remote_user: root
   vars:
