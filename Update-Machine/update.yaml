@@ -1,6 +1,6 @@
 ---
 ##### Machine Updates
-- hosts: NewHostCentOS, NewHostDebian
+- hosts: NewHostCentOS, NewHostDebian, Debian, CentOS
   become: yes
   become_user: root
   tasks:
