@@ -14,7 +14,7 @@
   
 - rpm_key:
     state: present
-    key: https://repo.zabbix.com/RPM-GPG-KEY-ZABBIX
+    key: http://repo.zabbix.com/RPM-GPG-KEY-ZABBIX
 
 - name: install zabbix centOS 8 rpm file
   yum:
