@@ -10,12 +10,12 @@
 - name: disable SELinux
   selinux:
     state: disabled
-  when: ansible_os_family == "CentOS-8"
+  when: ansible_os_family == "RedHat"
 
 - name: install zabbix centOS 8 rpm file
   yum:
     name: "{{ centos8_link }}"
-  when: ansible_os_family == "CentOS-8"
+  when: ansible_os_family == "RedHat"
 
 - name: install zabbix-agent 5.2 for centOS 8
   yum: 
@@ -23,7 +23,7 @@
     enablerepo: zabbix
     update_cache: true
     state: latest
-  when: ansible_os_family == "CentOS-8"
+  when: ansible_os_family == "RedHat"
 
 ### Debian 10
 - name: download zabbix deb file for Debian 10
