@@ -1,9 +1,9 @@
 ---
 - hosts: CentOS, Debian
   become: yes
-#  remote_user: USERNAME
+  remote_user: root
   vars:
-    zbx_srv: 192.168.0.1
+    zbx_srv: 10.30.0.183
     centos8_link: https://repo.zabbix.com/zabbix/5.2/rhel/8/x86_64/zabbix-release-5.2-1.el8.noarch.rpm
     debian10_link: https://repo.zabbix.com/zabbix/5.2/debian/pool/main/z/zabbix-release/zabbix-release_5.2-1+debian10_all.deb
     debian10_file: zabbix-release_5.2-1+debian10_all.deb
