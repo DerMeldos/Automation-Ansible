@@ -1,0 +1,26 @@
+---
+- name: apache installation
+  hosts: NewWebServer
+  tasks:
+  - name: Install apache packages 
+    yum:
+      name: httpd
+      state: present
+  - name: sicherstellen das httpd läuft
+    service:
+      name: httpd 
+      state: started
+  - name: port 80 http öffnen
+    firewalld:
+      service: http
+      permanent: true
+      state: enabled
+   - name: port 443 https öffnen
+     firewalld:
+      service: https
+      permanent: true
+      state: enabled
+  - name: firewall restart
+    service: 
+      name: firewalld 
+      state: restarted
