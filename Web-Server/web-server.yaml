@@ -10,6 +10,10 @@
     service:
       name: httpd 
       state: started
+ - name: apache autostarten bei Boot
+  systemd:
+    name: httpd
+    enabled: yes
   - name: port 80 http öffnen
     firewalld:
       service: http
