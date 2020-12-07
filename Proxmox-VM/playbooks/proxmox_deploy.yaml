@@ -38,4 +38,4 @@
  user: root
  gather_facts: false
  roles:
- — { role: proxmox_deploy, default_proxmox_node: proxmox003 }
+ — { role: proxmox_deploy, default_proxmox_node: proxmox002 }
