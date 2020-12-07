@@ -1,0 +1,41 @@
+ — name: ‘prep proxmox hosts for automation’
+ hosts: ‘proxmox003’
+ vars_prompt:
+ — name: PV_password
+ prompt: “Node Password”
+ private: yes
+ — name: VM_name
+ prompt: “VM name”
+ private: no
+ — name: VM_network
+ prompt: “Network associated to ipconfig0”
+ private: no
+ default: vlan30
+ — name: VM_IP
+ prompt: “VM IP”
+ private: no
+ default: 10.30.10.200
+ — name: VM_sockets
+ prompt: “VM socket/s”
+ private: no
+ default: 1
+ — name: VM_cores
+ prompt: “VM core/s”
+ private: no
+ default: 2
+ — name: VM_memory
+ prompt: “VM RAM Memory (MB)”
+ private: no
+ default: 2048
+ — name: VM_INCREASE_DISK
+ prompt: “Increase virtio0 disk (32 GB) in”
+ private: no
+ default: 0
+ — name: PV_node
+ prompt: “Migrate Virtual Machine to”
+ private: no
+ default: none
+ user: root
+ gather_facts: false
+ roles:
+ — { role: proxmox_deploy, default_proxmox_node: proxmox003 }
