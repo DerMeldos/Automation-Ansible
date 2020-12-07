@@ -1,8 +1,0 @@
----
-# defaults file for proxmox_deploy
-VM_template: CentOS-8-Template
-default_disk: virtio0
-default_interface: ens18
-default_volume: /dev/vda
-default_partition: 2
-template_name: CentOS-8-Template
