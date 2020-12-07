@@ -7,6 +7,11 @@
     - name: ping hosts
       ping:
 
+    - name: Execute nodetool repair
+      command: {{cassandra_installation_dir}}/bin/nodetool repair -j 4
+      async: 3600
+      poll: 10
+
     - name: check OS
       debug: msg={{ansible_distribution}}-{{ansible_distribution_version}}
   
