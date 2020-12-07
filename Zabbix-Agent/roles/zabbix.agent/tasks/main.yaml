@@ -29,12 +29,12 @@
     state: latest
   when: ansible_os_family == "RedHat"
   
- - name: port 10050 zabbix-agent öffnen
-   firewalld:
-     service: zabbix-agent
-     permanent: true
-     state: enabled
-   when: ansible_os_family == "RedHat"
+- name: port 10050 zabbix-agent öffnen
+  firewalld:
+    service: zabbix-agent
+    permanent: true
+    state: enabled
+  when: ansible_os_family == "RedHat"
 
 ### Debian 10
 - name: download zabbix deb file for Debian 10
