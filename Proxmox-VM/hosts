@@ -1,5 +1,5 @@
-[proxmox003]
-proxmox003 ansible_ssh_host=10.30.0.130
+[proxmox002]
+proxmox002 ansible_ssh_host=10.30.0.120
 
 [proxmoxs:children]
-proxmox003
+proxmox002
