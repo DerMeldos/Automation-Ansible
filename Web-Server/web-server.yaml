@@ -20,7 +20,7 @@
       permanent: true
       state: enabled
   - name: port 443 https öffnen
-     firewalld:
+    firewalld:
       service: https
       permanent: true
       state: enabled
