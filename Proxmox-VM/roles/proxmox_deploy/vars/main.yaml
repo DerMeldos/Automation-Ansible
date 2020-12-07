@@ -1,8 +1,0 @@
-# vars file for proxmox_deploy
-vlan30:
- params:
- netmask: 16
- vmbr: 0
- gateway: 10.30.0.5
- dnsservers: “10.30.0.1”
- searchdomain:
