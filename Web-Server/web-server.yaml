@@ -10,16 +10,16 @@
     service:
       name: httpd 
       state: started
- - name: apache autostarten bei Boot
-  systemd:
-    name: httpd
-    enabled: yes
+  - name: apache autostarten bei Boot
+     systemd:
+      name: httpd
+      enabled: yes
   - name: port 80 http öffnen
     firewalld:
       service: http
       permanent: true
       state: enabled
-   - name: port 443 https öffnen
+  - name: port 443 https öffnen
      firewalld:
       service: https
       permanent: true
