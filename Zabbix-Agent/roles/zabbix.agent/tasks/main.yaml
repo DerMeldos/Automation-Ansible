@@ -29,9 +29,16 @@
     state: latest
   when: ansible_os_family == "RedHat"
   
-- name: port 10050 zabbix-agent öffnen
+- name: port 10051 zabbix-agent öffnen
   firewalld:
     service: zabbix-agent
+    permanent: true
+    state: enabled
+  when: ansible_os_family == "RedHat"
+  
+- name: port 10050 zabbix-server öffnen
+  firewalld:
+    service: zabbix-server
     permanent: true
     state: enabled
   when: ansible_os_family == "RedHat"
